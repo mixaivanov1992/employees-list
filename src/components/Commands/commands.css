@@ -1,0 +1,7 @@
+.commands {
+	margin-top: 1em;
+	text-align: center;
+}
+.commands button:first-child {
+	margin-right: 0.5em;
+}

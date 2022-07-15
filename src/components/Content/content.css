@@ -1,0 +1,26 @@
+.content table {
+	width: calc(100% - 4em);
+	margin: 1em 2em;
+	border: 0.1em solid #dddddd;
+	border-collapse: collapse;
+}
+.content table .selected-row {
+	color: #fff;
+	background: #333;
+}
+.content th {
+	font-weight: bold;
+	padding: 0.5em;
+	background: #efefef;
+	border: 0.1em solid #dddddd;
+}
+
+.content td {
+	user-select: none;
+	border: 0.1em solid #dddddd;
+	padding: 0.5em;
+	cursor: pointer;
+}
+.content tr:hover td {
+	background: #dbdbdb;
+}

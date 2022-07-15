@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        "sort-imports-es6-autofix"
+    ],
+    "extends": [
+        "plugin:vue/vue3-recommended"
+    ],
+    "rules": {
+        "vue/script-indent": ["error", 4],
+        "indent": ["error", 4],
+        "sort-imports-es6-autofix/sort-imports-es6": [2, {
+            "ignoreCase": false,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }]
+    }
+}

@@ -1,26 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Loader :is-loading="loading" />
+  <Commands :change-loading="changeLoading" />
+  <Content :change-loading="changeLoading" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import './assets/reset.css'
+import './assets/style.css'
+import Commands from './components/Commands/Commands';
+import Content from './components/Content/Content'
+import Loader from './components/Common/Loader/Loader';
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        Commands,
+        Content,
+        Loader,
+    },
+    data() {
+        return {
+            loading: false,
+        };
+    },
+    methods: {
+        changeLoading(){
+            this.loading = !this.loading
+        }
+    }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
